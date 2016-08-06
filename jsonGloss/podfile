@@ -1,0 +1,6 @@
+platform :ios, '9.0'
+use_frameworks!
+target ‘jsonGloss’ do
+pod 'Gloss', '~> 0.7'
+
+end
