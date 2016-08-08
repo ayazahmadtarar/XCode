@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="fireBaseDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,71 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pNX-ZZ-YOP">
+                                <rect key="frame" x="20" y="285" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nxt-X5-HOw">
+                                <rect key="frame" x="20" y="234" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Sv-hm-J3u">
+                                <rect key="frame" x="20" y="333" width="560" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eGs-K1-3zb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Cc-4K-KYv">
+                                <rect key="frame" x="20" y="388" width="560" height="30"/>
+                                <state key="normal" title="Signup"/>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="74W-yq-y74"/>
+                                    <action selector="signup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="drs-ah-Uk5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ruu-k9-u48">
+                                <rect key="frame" x="20" y="434" width="560" height="30"/>
+                                <state key="normal" title="Facebook Login"/>
+                                <connections>
+                                    <action selector="FacebookLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uWH-SK-wmC"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="1Cc-4K-KYv" secondAttribute="leading" id="0vv-57-cmd"/>
+                            <constraint firstItem="pNX-ZZ-YOP" firstAttribute="top" secondItem="nxt-X5-HOw" secondAttribute="bottom" constant="21" id="0z1-rv-4ax"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6Sv-hm-J3u" secondAttribute="trailing" id="4hg-Du-jmt"/>
+                            <constraint firstItem="6Sv-hm-J3u" firstAttribute="top" secondItem="pNX-ZZ-YOP" secondAttribute="bottom" constant="18" id="8G2-Pd-JCX"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Ruu-k9-u48" secondAttribute="leading" id="HcM-Jx-opP"/>
+                            <constraint firstItem="1Cc-4K-KYv" firstAttribute="top" secondItem="6Sv-hm-J3u" secondAttribute="bottom" constant="25" id="LJ0-hD-zhX"/>
+                            <constraint firstItem="1Cc-4K-KYv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OTI-jF-cQl"/>
+                            <constraint firstItem="pNX-ZZ-YOP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TuU-0a-aJe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pNX-ZZ-YOP" secondAttribute="trailing" id="Vlb-mi-aDM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Cc-4K-KYv" secondAttribute="trailing" id="e22-O6-80m"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ruu-k9-u48" secondAttribute="trailing" id="eRa-0K-F1D"/>
+                            <constraint firstItem="pNX-ZZ-YOP" firstAttribute="height" secondItem="nxt-X5-HOw" secondAttribute="height" id="ghG-06-iL9"/>
+                            <constraint firstItem="6Sv-hm-J3u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h4j-Ue-rgf"/>
+                            <constraint firstItem="pNX-ZZ-YOP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i6h-nH-Spp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nxt-X5-HOw" secondAttribute="trailing" id="iVe-DU-pjo"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="6Sv-hm-J3u" secondAttribute="leading" id="jD9-Ej-0Rs"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="nxt-X5-HOw" secondAttribute="leading" id="ofr-V6-dpx"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="pNX-ZZ-YOP" secondAttribute="leading" id="prQ-N5-Qcc"/>
+                            <constraint firstItem="Ruu-k9-u48" firstAttribute="top" secondItem="1Cc-4K-KYv" secondAttribute="bottom" constant="16" id="sKi-VW-yFk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="nxt-X5-HOw" id="ARd-j1-4EZ"/>
+                        <outlet property="password" destination="pNX-ZZ-YOP" id="apo-R9-NRI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="705" y="222"/>
         </scene>
     </scenes>
 </document>

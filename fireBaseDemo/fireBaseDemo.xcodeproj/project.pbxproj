@@ -27,6 +27,7 @@
 		8F1267B11D561E790064E428 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F1267B31D561E790064E428 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F1267B91D561E880064E428 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8F6F576C1D5870CE00E285C4 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		AD1966E22715D04A609C920E /* Pods_fireBaseDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fireBaseDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -53,6 +54,7 @@
 		8F12679B1D561E790064E428 = {
 			isa = PBXGroup;
 			children = (
+				8F6F576C1D5870CE00E285C4 /* Bridging-Header.h */,
 				8F1267A61D561E790064E428 /* fireBaseDemo */,
 				8F1267A51D561E790064E428 /* Products */,
 				BA0F6345C13F21730C8042E9 /* Pods */,
